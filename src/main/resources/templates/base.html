@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html 
+
+lang="en" 
+th:fragment="parent(content,title,script)" 
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}">SCM defualt page</title>
+    <link rel="stylesheet" data-th-href="@{'E:\Smart-Contact-manager\src\main\resources\static\css\output.css'}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
+
+
+    <!-- Commonn header -->
+    <div data-th-replace="navbar :: navbar">
+
+    </div>
+
+    <!-- Main content -->
+    <div class="p-4" >
+        <section data-th-replace="${content}"> </section>
+
+    </div>
+
+<!-- commond footer -->
+ <footer class="p-4">Made with Love by Himanshu</footer>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <th:block data-th-replace="${script}"></th:block>
+</body>
+
+</html>
